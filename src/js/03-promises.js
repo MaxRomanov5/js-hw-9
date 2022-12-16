@@ -18,9 +18,7 @@ function createPromise(position, delay) {
 
 const onSubmitForm = e => {
   e.preventDefault();
-  if (!e.target.tagName === 'BUTTON') {
-    return
-  };
+
 
   const {
     elements: { delay, step, amount },

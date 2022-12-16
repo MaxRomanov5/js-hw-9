@@ -54,7 +54,12 @@ const options = {
       const currentDate = new Date();
 
       const diffDate = pickDate[0] - currentDate;
+      console.log(diffDate);
+if (diffDate <= 0){
 
+  refs.btnStart.disabled = true;
+  return
+}
       const { days, hours, minutes, seconds } = convertMs(diffDate);
  
       refs.wrapDays.textContent = days.toString().padStart(2,"0");
